@@ -1,0 +1,283 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+		    "path" : "pages/main/main",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/pc/index/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"titleNView": false //禁用原生导航栏 
+		    }
+		    
+		},
+		{
+		    "path" : "pages/pc/category/category",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"titleNView": false //禁用原生导航栏 
+		    }
+		    
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": false
+			}
+		}
+		,{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"titleNView": false //禁用原生导航栏  
+			}
+		}
+	    ,{
+            "path" : "pages/login/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/forget",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "忘记密码",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/live/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "直播",
+                "enablePullDownRefresh": false,
+				"autoBackButton": false
+            } 
+        }
+		,{
+		    "path" : "pages/live/livepull",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "直播",
+		        "titleNView": false ,//禁用原生导航栏  
+				"app-plus": {
+					"titleNView":false,
+					// 将回弹属性关掉
+					"bounce": "none",
+					"subNVues": [{
+						"id": "applivepull", // 唯一标识  
+						"path": "pages/live/components/applivepull", // 页面路径  
+						// "type": "popup",
+						"style": {
+							"position": "absolute",
+							"dock": "right",
+							"width": "100%",
+							"height": "100%",
+							"background":"transparent"
+						}
+					}]
+								
+				}
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/video/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "视频",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+		    "path" : "pages/video/videoplay",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "视频",
+		        "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView":false,
+					// 将回弹属性关掉
+					"bounce": "none",
+					"subNVues": [{
+						"id": "videoplay", // 唯一标识  
+						"path": "pages/video/components/appvideobox", // 页面路径  
+						// "type": "popup",
+						"style": {
+							"position": "absolute",
+							"dock": "right",
+							"width": "100%",
+							"height": "100%",
+							"background":"transparent"
+						}
+					}]
+								
+				}
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/my/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+		    "path" : "pages/my/save",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "编辑资料",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/my/profit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的收益",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/live/livepush",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/live/components/livepulltop",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/live/components/livegift",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+            "path" : "pages/live/testlive",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/live/class/class",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/pc/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"titleNView": false //禁用原生导航栏 
+            }
+            
+        },
+		{
+		    "path" : "pages/pc/livepull/livepull",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"titleNView": false //禁用原生导航栏 
+		    }
+		    
+		}
+        
+        ,{
+            "path" : "pages/pc/class/class",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/pc/list/list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"titleNView": false //禁用原生导航栏 
+            }
+        },{
+            "path" : "pages/pc/live/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"titleNView": false //禁用原生导航栏 
+            }
+        }
+        ,{
+            "path" : "pages/pc/verify/verify",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"scrollIndicator":"none" 
+		
+		
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式（list 的索引项）
+		"list": [{
+				"name": "index", //模式名称
+				"path": "pages/index/index", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到。
+			}
+		]
+	}
+}

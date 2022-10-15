@@ -1,0 +1,149 @@
+<template>
+	<view class="rk-bg">
+		<view class="rk-back" @click="clickBack">
+			<image class="rk-back-img" src="../../../static/video/video_back.png" mode="aspectFit"></image>
+		</view>
+		<view class="rk-mid">
+			
+			<!-- 底部视频信息 -->
+			<video-bottom class="rk-videoauthor" :name="name" :videoDes="title"></video-bottom>
+			
+			<!-- 右边 -->
+			<video-right class="rk-vright" 
+						:icon="userHeader" 
+						:comments="videoCom" 
+						:shares="videoShare"
+						:like="videoLike"
+						:attent="userAttent"
+						:islike="isLike"
+						@attClick="attClick"
+						@likeClick="likeClick">
+			</video-right>
+			
+		</view>
+		<view class="rk-footer">
+			<video-input @send-message="getInputMessage" v-model="videoVal" :inputVal="videoVal"></video-input>
+		</view>
+	</view>
+	
+</template>
+
+<script>
+	import videoInput from "./videoinput.vue";
+	import videoBottom from "./videobottom.vue"
+	import videoRight from "./videoright.vue"
+	export default {
+		data() {
+			return {
+				name: '',
+				title: '',
+				videoVal: '',
+				//头像
+				userHeader: "../../../../static/img/headimg.png",
+				//评论数
+				videoCom: 100,
+				//分享数
+				videoShare: 200,
+				//喜欢
+				videoLike: 101,
+				islike: true,
+				//关注
+				userAttent: true,
+				videoUrl: "http://ybdsp.yunbaozb.com/20210526/60adbb945a3b8.mp4",
+				
+			}
+		},
+		onLoad() {
+			uni.$on('update-data', function(data) {
+				console.log('监听到事件来自 update ，携带参数 msg 为：' + data.msg);
+			});
+			console.log('nvue load');
+		},
+		onUnload() {
+			uni.$off('update-data',function(){
+				console.log('nvue off');
+			});
+			console.log('nvue unload');
+		},
+		onShow() {
+			console.log('nvue show');
+			
+		},
+		methods: {
+			getInputMessage: function(message) {
+				//获取子组件的输入数据
+				console.log(message);
+			},
+			clickBack() {
+				uni.navigateBack({});
+			},
+			attClick(){
+				this.userAttent = !this.userAttent;
+			},
+			likeClick(){
+				this.islike = !this.islike;
+				if(this.islike){
+					this.videoLike += 1;
+				}else {
+					this.videoLike -= 1;
+				}
+			}
+		},
+		components: {
+			videoInput,
+			videoBottom,
+			videoRight,
+		},
+		
+	}
+</script>
+
+<style>
+	.rk-bg {
+		flex: 1;
+		/* position: relative; */
+		/* background-color: rgba(255,0,0,0.2); */
+	}
+	.rk-back {
+		width: 36px;
+		height: 36px;
+		border-radius: 18px;
+		background-color: rgba(0, 0, 0, 0.3);
+		position: fixed;
+		left: 15px;
+		top: 25px;
+		
+		justify-content: center;
+	}
+	.rk-back-img{
+		width: 26px;
+		height: 26px;
+		left: 3px;
+	}
+	.rk-mid {
+		/* flex: 1; */
+		position: fixed;
+		flex-direction: row;
+		bottom: 100rpx;
+		width: 750rpx;
+		/* overflow: hidden; */
+		/* background-color: #18B566; */
+	}
+	.rk-videoauthor {
+		/* background-color: rgba(255,153,0,0.6); */
+		flex: 8;
+		flex-direction: column-reverse;
+	}
+	.rk-vright {
+		/* background-color: rgba(255,0,0,0.6); */
+		flex: 2;
+		flex-direction: column;
+	}
+	.rk-footer{
+		position: fixed;
+		width: 750rpx;
+		height: 100rpx;
+		bottom: 0rpx;
+		/* background-color: #2979FF; */
+	}
+</style>

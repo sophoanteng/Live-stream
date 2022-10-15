@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93" height="31" viewBox="0 0 93 31">
+  <defs>
+    <clipPath id="clip-Lives_Icon">
+      <rect width="93" height="31"/>
+    </clipPath>
+  </defs>
+  <g id="Lives_Icon" data-name="Lives Icon" clip-path="url(#clip-Lives_Icon)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="93" height="31" rx="3" fill="#fb4a59"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="11" height="11" rx="5.5" transform="translate(10 10)" fill="#fff"/>
+    <path id="Path_1" data-name="Path 1" d="M1.242-12.564V0H7.9V-2H3.762V-12.564ZM14,0h2.52V-12.564H14Zm14.67-2.574-3.456-9.99h-2.7L27.126,0h3.06l4.608-12.564H32.112ZM48.1-12.582h-7.29V0H48.1V-2.052h-4.77v-3.33h4.23v-2h-4.23v-3.15H48.1Z" transform="translate(34 22)" fill="#f2f2f2"/>
+  </g>
+</svg>

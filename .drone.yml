@@ -1,0 +1,29 @@
+kind: pipeline
+name: development
+clone:
+  disable: true
+trigger:
+  branch:
+  - develop
+
+steps:
+  # 遠端部屬
+  - name: deploy-dev-admin
+    image: appleboy/drone-ssh
+    settings:
+      host: 
+        - 34.142.153.212
+      username:
+        from_secret: ssh_username #在web界面中设置密码
+      key:
+        from_secret: password #在web界面中设置密码
+      port: 22
+      command_timeout: 10m
+      script:
+        - cd /home/ubuntu/web_h5/src
+        - git checkout .
+        - git clean -fd
+        - git checkout develop
+        - git pull
+        - cd /home/ubuntu/web_h5
+        - npm run build:h5
